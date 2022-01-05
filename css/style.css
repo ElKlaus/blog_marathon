@@ -43,10 +43,69 @@ img {
   cursor: [pointer];
 }
 
+:root {
+  --accent-color: #5D71DD;
+}
+
 body {
   overflow-anchor: none;
   margin: 0;
   font-family: "Futura PT", sans-serif;
   font-weight: 400;
   background-color: #f9f9f9;
+}
+
+.container {
+  max-width: 1430px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+/*==== header ===*/
+.header {
+  padding: 6px 0;
+  background-color: #fff;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  transform: translateY(5px);
+}
+
+.header__nav {
+  margin-right: 10px;
+}
+
+.header__right {
+  display: flex;
+  align-items: center;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+}
+
+.phone {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--accent-color);
 }
