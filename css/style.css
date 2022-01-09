@@ -45,6 +45,8 @@ img {
 
 :root {
   --accent-color: #5D71DD;
+  --dark-color: #2F2222;
+  --grid-gap: 40px;
 }
 
 body {
@@ -76,9 +78,10 @@ body {
 
 /*==== header ===*/
 .header {
-  padding: 6px 0;
+  padding-top: 6px;
+  padding-bottom: 4px;
   background-color: #fff;
-}
+} 
 
 .header__container {
   display: flex;
@@ -91,7 +94,7 @@ body {
 }
 
 .header__nav {
-  margin-right: 10px;
+  margin-right: var(--grid-gap);
 }
 
 .header__right {
@@ -104,8 +107,104 @@ body {
   align-items: center;
 }
 
+.nav__item:not(:last-child) {
+  margin-right: var(--grid-gap);
+}
+
+.nav__link {
+  position: relative;
+  font-size: 18px;
+  color: var(--dark-color);
+}
+
+.nav__link--current {
+  color: var(--accent-color);
+}
+
+.nav__link--current::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+}
+
 .phone {
   font-size: 18px;
   font-weight: 500;
   color: var(--accent-color);
+  background-image: url("../img/phone.svg");
+  background-position: left center;
+  background-repeat: no-repeat;
+  padding-left: 24px;
+}
+
+.banner {
+  height: 300px;
+  background-image: url("../img/banner.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.content {
+  padding-top: var(--grid-gap);
+}
+
+.content__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--grid-gap);
+}
+
+.posts {
+  grid-column: 3 span;
+}
+
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(8, 180px);
+  gap: var(--grid-gap);
+}
+
+.post-grid__item:nth-child(5n+1) {
+  grid-column: 2 span;
+  grid-row: 2 span;
+}
+
+.post-grid__item:nth-child(5n+2) {
+  grid-row: 2 span;
+}
+
+.post-grid__item:nth-child(5n+3) {
+  grid-row: 2 span;
+}
+
+.post-grid__item:nth-child(5n+4) {
+  grid-column: 2 span;
+}
+
+.post-grid__item:nth-child(5n+5) {
+  grid-column: 2 span;
+}
+
+.blog-post {
+  padding: var(--grid-gap);
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background: #fff;
+}
+
+.blog-post__category {
+  background: #F7F8FD;
+  border-radius: 8px;
+}
+
+.blog-post--main {
+  height: 280px;
+  margin-bottom: var(--grid-gap);
 }
