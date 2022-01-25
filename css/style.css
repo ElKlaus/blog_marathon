@@ -255,4 +255,50 @@ body {
 
 .post-grid__item:nth-child(5n+2) .blog-post {
   background-color: var(--accent-color);
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.post-grid__item:nth-child(5n+2) .blog-post__category {
+  background: #7d8de4;
+  color: #fff;
+}
+
+.post-grid__item:nth-child(5n+2) .blog-post__title {
+  color: #fff;
+}
+
+.post-grid__item:nth-child(5n+2) .blog-post__date {
+  top: auto;
+  right: auto;
+  bottom: var(--grid-gap);
+  left: 30px;
+  color: #fff;
+}
+
+.post-grid__item:nth-child(5n+2) .blog-post__descr {
+  display: none;
+}
+/* след карточка */
+.post-grid__item:nth-child(5n+3) .blog-post {
+  background-color: var(--accent-color);
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.post-grid__item:nth-child(5n+3) .blog-post__category {
+  background: #7d8de4;
+  color: #fff;
+}
+
+.post-grid__item:nth-child(5n+3) .blog-post__title {
+  color: #fff;
+}
+
+.post-grid__item:nth-child(5n+3) .blog-post__date {
+  top: auto;
+  right: auto;
+  bottom: var(--grid-gap);
+  left: 30px;
+  color: #fff;
 }
